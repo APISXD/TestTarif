@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Cek Tarif Afazz</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.32/sweetalert2.css"
+      integrity="sha512-e+TwvhjDvKqpzQLJ7zmtqqz+5jF9uIOa+5s1cishBRfmapg7mqcEzEl44ufb04BXOsEbccjHK9V0IVukORmO8w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="https://commuterline.id/img/favicon-kci.jpg" />
+
+    <link rel="stylesheet" href="kci.css" />
+  </head>
+  <body>
+    <div id="root">
+      <header class="header-global">
+        <div class="container header-mobile">
+          <div class="row">
+            <div class="header">
+              <div class="burger-container">
+                <div id="burger">
+                  <div class="bar topBar"></div>
+                  <div class="bar midBar"></div>
+                  <div class="bar btmBar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="floating-socmed">
+        <div class="inner-floating-socmed">
+          <ul class="p-0">
+            <li>
+              <a
+                href="https://twitter.com/adityfaiz"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/adityfaizp"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/APISXD"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container-fluid global-banner pos-relative">
+        <div class="row">
+          <div class="col-md-12 p-0">
+            <img
+              src="/app/sam/assets/krl_trip/ed9b06cb4e40fa303c7f40ca897a7ee8.jpg"
+              alt=""
+              class="showDesk"
+            />
+            <img
+              src="/app/sam/assets/krl_trip/ed9b06cb4e40fa303c7f40ca897a7ee8.jpg"
+              alt=""
+              class="showMob"
+              style="width: 620; height: 240px"
+            />
+            <div class="container-fluid caption-banner">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-12">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid bg-grey-global">
+        <div class="row">
+          <div class="col-md-12 p-0">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <nav class="nav nav-pills nav-fill nav-capsule-global">
+                    <a
+                      class="nav-item nav-link"
+                      href="mrt.html"
+                      >Info Tarif MRT
+                    </a>
+                    <a
+                      class="nav-item nav-link active"
+                      href="https://commuterline.id/perjalanan-krl/info-tarif"
+                      >Info Tarif KRL
+                    </a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid jadwal-home tarif-fixer">
+              <div class="row">
+                <div class="col-md-12 p-0">
+                  <div class="container redbox">
+                    <div class="row">
+                      <div class="col-md-7">
+                        <div class="container pos-relative home-field-jadwal">
+                          <select
+                            class="form-select"
+                            id="st-from"
+                            aria-label="Default select example"
+                          >
+                            <option selected>Dari Stasiun Mana?</option>
+                          </select>
+                          <select
+                            class="form-select"
+                            id="st-to"
+                            aria-label="Default select example"
+                          >
+                            <option selected>Sampai Stasiun Mana?</option>
+                          </select>
+                          <input
+                            type="number"
+                            id="saldo"
+                            placeholder="Saldo Awal (Rp)"
+                            class="masukansaldo"
+                          />
+                          <button class="submitBtn">Submit</button>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div id="test"></div>
+                        <img
+                          src="https://commuterline.id/img/icon kereta.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tarif-box">
+                    <div class="row">
+                      <div class="col-md-5">
+                        <img src="https://commuterline.id/img/kmt.png" alt="" />
+                      </div>
+                      <div class="col-md-7">
+                        <div class="ajax-response">
+                          <p id="from-to">-</p>
+                          <span id="ongkos">Rp </span>
+                          <p id="saldo-akhir">Sisa Saldo: Rp </p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid apps-secondary">
+            <div class="row">
+              <div
+                class="container-fluid full-bg title-and-image"
+                style="
+                  background-image: url('https://commuterline.id/img/ac5fea5836c960ae00ed245229e59ab2.png');
+                "
+              >
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12 pos-relative">
+                          <span class="section-name red"
+                            >Naik Commuter Line Kini lebih mudah</span
+                          >
+                          <h2>Download C-Access Sekarang!</h2>
+
+                          <img
+                            src="/app/sam/assets/krl_trip/b5231dd918c324f6f14867d75b119f6e.png"
+                            class="img-desktop"
+                            alt=""
+                          />
+
+                          <img src="" class="w-100 img-mobile" alt="" />
+
+                          <div class="download-button">
+                            <p></p>
+
+                            <a
+                              href="https://play.google.com/store/apps/details?id=com.kci.access"
+                              ><img
+                                src="/app/sam/assets/images/ac70ce07ac0616502090352789b6f44b.png"
+                                alt=""
+                            /></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      integrity="sha512-TawcSfIUO8yB0Or8FXEDW2X32Q71ZGAOYVVwe7n3EsoyQb+iMZbodI6RnQ4JDcItNoO3TmwP7/bD89vhQA4zTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://commuterline.id/js/kci.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        global();
+      });
+    </script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5V1YVMV1B3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-5V1YVMV1B3");
+    </script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.32/sweetalert2.all.min.js"
+      integrity="sha512-Urg8l2V5SUjMkg0IhnAJw1G0viVOVqOxsoa8jkkq5n7JA55bGWAYJME3Lap1q0SEWvtot2pOgoprTOib4jtpuw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        function numberSeperator(x) {
+          return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+$(".submitBtn").click(function () {
+    var fromVal = $("#st-from").val();
+    var toVal = $("#st-to").val();
+    var saldoAwal = $("#saldo").val(); // Mengambil nilai saldo awal
+
+    if (saldoAwal) { // Mengecek apakah saldo diisi
+        saldoAwal = parseFloat(saldoAwal);
+        // Menambahkan kondisi minimal saldo awal adalah 5000
+        if (saldoAwal < 5000) {
+            Swal.fire({
+                icon: "error",
+                title: "Maaf ",
+                text: "Saldo awal harus minimal Rp 5000.",
+            });
+            return;
+        }
+    }
+
+    $.ajax({
+        url: "https://api-partner.krl.co.id/krlweb/v1/fare?stationfrom=" + fromVal + "&stationto=" + toVal,
+        type: "GET",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader(
+                "Authorization",
+                "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMjJiYzZmNmE0YjdlZTdkMDY3YTA4YTVhMDEwNzAzMTkzMDZlNDU5ZTZhMzMzODMzNzhkYjk4YzUzMTdkYTkxMTU4MGM5OGVmM2IwMGE1YTgiLCJpYXQiOjE2NjE0OTg3NzksIm5iZiI6MTY2MTQ5ODc3OSwiZXhwIjoxNjkzMDM0Nzc5LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.FcIO89FgYncw4-2-2ckrA6KBMwg7Q3WgH-OqU8DbNrhQO5rsH0Am2z7s-aW-XxtLLRv7JPm0nbT-tyms2L2En5rMZB9nkKukJ3QquBvj7dejF7hQMXATD3JpEvvZm8DqEanNjBOk9JKo5nkKqZow9FSFezPieK_Njb3R9BgAewNlBg24_ELi5AK7g96AdcR1KWg5SlQMa3EWNsaeuq0t5fg-30xFUTt7hJ4eO6EssKmbkHE5lKspXXoTB9QRN4u_DIpy14CfQPoCxVNrIFdnxv8qHa0ggdit5iRygVShygBE87w2wivEPAsEUsxLiNBvC6Lrt8QNSZ21bGPuyHVgZAe5LZvW7Mf5TaKF_E5JVdgTqQYus-W4SXBX2cqDtqVC68ec12NFj-vRg114HqfjFN5-yLOPECNAvvVwClaT3kEXsBTiKGhdDUlfwUjipjSBoZC2LV3GHmyp-K8sGQDm3iRcwHBzjIys6d93z2RDdjzKtp8E5aNnMGGe4SPy2YpwHjQ8J1QwGnZM33_d1U5LbajkKW09n2u3hnJWGYGGQvvGNRv2AFIx4fwE_FEuoldclZOrXmcyOmyn-GjRuUNWO-flEPFulnGFiU5wODjJ_2l4cLOg-omV6qSecB36NE0wcf1R1nFLqTtuol-jEOTtQX_97CLVq1RbvjxX_huUZY0"
+            );
+        },
+        dataType: "json",
+        success: function (data) {
+            var tarif = data.data[0].fare; // Ambil tarif dari data
+            var sisaSaldo = saldoAwal - tarif; // Hitung sisa saldo
+
+            if (saldoAwal && sisaSaldo >= 0) {
+                // Jika saldo cukup untuk membayar tarif
+                $("#from-to").text(data.data[0].sta_name_from + " - " + data.data[0].sta_name_to);
+                $("#ongkos").text("Rp " + numberSeperator(tarif));
+                $("#saldo-akhir").text("Rp " + numberSeperator(sisaSaldo)); // Menampilkan sisa saldo
+                $("#saldo").val(sisaSaldo); // Update input saldo dengan nilai sisa saldo
+            } else if (saldoAwal && sisaSaldo < 0) {
+                // Jika saldo tidak mencukupi
+                Swal.fire({
+                    icon: "error",
+                    title: "Maaf ",
+                    text: "Saldo tidak mencukupi untuk membayar tarif ini.",
+                });
+            } else {
+                // Jika tidak ada saldo diisi atau saldo cukup
+                $("#from-to").text(data.data[0].sta_name_from + " - " + data.data[0].sta_name_to);
+                $("#ongkos").text("Rp " + numberSeperator(tarif));
+                $("#saldo-akhir").text("");
+            }
+        },
+        error: function (error) {
+            $("#from-to").text(" - ");
+            $("#ongkos").text("Rp");
+            $("#saldo-akhir").text("Rp");
+            Swal.fire({
+                icon: "error",
+                title: "Maaf ",
+                text: "Data Tidak Di Temukan",
+            });
+        },
+    });
+});
+
+
+        $.ajax({
+          url: "https://api-partner.krl.co.id/krlweb/v1/krl-station",
+          type: "GET",
+          beforeSend: function (xhr) {
+            xhr.setRequestHeader(
+              "Authorization",
+              "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMjJiYzZmNmE0YjdlZTdkMDY3YTA4YTVhMDEwNzAzMTkzMDZlNDU5ZTZhMzMzODMzNzhkYjk4YzUzMTdkYTkxMTU4MGM5OGVmM2IwMGE1YTgiLCJpYXQiOjE2NjE0OTg3NzksIm5iZiI6MTY2MTQ5ODc3OSwiZXhwIjoxNjkzMDM0Nzc5LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.FcIO89FgYncw4-2-2ckrA6KBMwg7Q3WgH-OqU8DbNrhQO5rsH0Am2z7s-aW-XxtLLRv7JPm0nbT-tyms2L2En5rMZB9nkKukJ3QquBvj7dejF7hQMXATD3JpEvvZm8DqEanNjBOk9JKo5nkKqZow9FSFezPieK_Njb3R9BgAewNlBg24_ELi5AK7g96AdcR1KWg5SlQMa3EWNsaeuq0t5fg-30xFUTt7hJ4eO6EssKmbkHE5lKspXXoTB9QRN4u_DIpy14CfQPoCxVNrIFdnxv8qHa0ggdit5iRygVShygBE87w2wivEPAsEUsxLiNBvC6Lrt8QNSZ21bGPuyHVgZAe5LZvW7Mf5TaKF_E5JVdgTqQYus-W4SXBX2cqDtqVC68ec12NFj-vRg114HqfjFN5-yLOPECNAvvVwClaT3kEXsBTiKGhdDUlfwUjipjSBoZC2LV3GHmyp-K8sGQDm3iRcwHBzjIys6d93z2RDdjzKtp8E5aNnMGGe4SPy2YpwHjQ8J1QwGnZM33_d1U5LbajkKW09n2u3hnJWGYGGQvvGNRv2AFIx4fwE_FEuoldclZOrXmcyOmyn-GjRuUNWO-flEPFulnGFiU5wODjJ_2l4cLOg-omV6qSecB36NE0wcf1R1nFLqTtuol-jEOTtQX_97CLVq1RbvjxX_huUZY0"
+            );
+          },
+          dataType: "json",
+          success: function (data) {
+            // alert(data.message);
+            $("#st-from").html("");
+            $("#st-from").append(
+              $("<option>", {
+                value: "",
+                text: "Dari Stasiun Mana?",
+              })
+            );
+            for (var i = 0; i < data.data.length; i++) {
+              if (data.data[i].fg_enable > 0) {
+                // alert('ada');
+                $("<option value='" + data.data[i].sta_id + "' />")
+                  .text(data.data[i].sta_name)
+                  .appendTo($("#st-from"));
+              } else {
+                $("<option value='" + data.data[i].sta_id + "' disabled />")
+                  .text("------------" + data.data[i].sta_name + "------------")
+                  .appendTo($("#st-from"));
+              }
+            }
+
+            $("#st-to").html("");
+            $("#st-to").append(
+              $("<option>", {
+                value: "",
+                text: "Sampai Stasiun Mana?",
+              })
+            );
+            for (var i = 0; i < data.data.length; i++) {
+              if (data.data[i].fg_enable > 0) {
+                // alert('ada');
+                $("<option value='" + data.data[i].sta_id + "' />")
+                  .text(data.data[i].sta_name)
+                  .appendTo($("#st-to"));
+              } else {
+                $("<option value='" + data.data[i].sta_id + "' disabled />")
+                  .text("------------" + data.data[i].sta_name + "------------")
+                  .appendTo($("#st-to"));
+              }
+            }
+          },
+          error: function (xhr, options, error) {
+            $("#st-from").html("");
+            $("#st-from").append(
+              $("<option>", {
+                value: "",
+                text: "Dari Stasiun Mana?",
+              })
+            );
+
+            $("#st-to").html("");
+            $("#st-to").append(
+              $("<option>", {
+                value: "",
+                text: "Sampai Stasiun Mana?",
+              })
+            );
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
